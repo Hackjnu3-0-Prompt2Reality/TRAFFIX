@@ -28,4 +28,3 @@ Enhances the system's ability to adapt to changing traffic conditions.
 * Prerequisites
 * Python 3.x
 * OpenCV
-* [Additional dependencies, if any]
