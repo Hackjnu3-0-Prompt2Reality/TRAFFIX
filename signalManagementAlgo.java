@@ -1,5 +1,7 @@
 import java.util.*;
 
+// code is currentl broken do not run
+
 public class signalManagementAlgo {
     public static void FrontToLast(Queue<Integer> q, int qsize)
     {
