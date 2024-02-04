@@ -1,4 +1,4 @@
-## AI-OPTIMIZED TRAFFIC MANAGEMENT SYSTEM
+# AI-OPTIMIZED TRAFFIC MANAGEMENT SYSTEM
 
 ## Overview
 * The Traffic Management System is a project aimed at optimizing traffic flow at intersections through the use of computer vision, real-time data processing, and machine learning. The system dynamically adjusts traffic signals, provides real-time insights into congestion, and enhances overall traffic management.
