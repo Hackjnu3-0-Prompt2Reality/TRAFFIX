@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 
 cap = cv2.VideoCapture(r"training_video.mp4")
 min_width_react = 80
