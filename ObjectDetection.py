@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture(r"C:\Users\shiva\Downloads\video.mp4")
+cap = cv2.VideoCapture(r"training_video.mp4")
 min_width_react = 80
 min_height_react = 80
 algo = cv2.createBackgroundSubtractorMOG2()
