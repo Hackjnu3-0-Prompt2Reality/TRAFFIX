@@ -204,7 +204,6 @@ class Vehicle(pygame.sprite.Sprite):
                             self.y -= self.speed
             else: 
                 if((self.x>=self.stop or self.crossed == 1 or (currentGreen==2 and currentYellow==0)) and (self.index==0 or self.x>(vehicles[self.direction][self.lane][self.index-1].x + vehicles[self.direction][self.lane][self.index-1].currentImage.get_rect().width + gap2) or (vehicles[self.direction][self.lane][self.index-1].turned==1))):                
-                # (if the image has not reached its stop coordinate or has crossed stop line or has green signal) and (it is either the first vehicle in that lane or it is has enough gap to the next vehicle in that lane)
                     self.x -= self.speed  # move the vehicle    
 
         elif(self.direction=='up'):
