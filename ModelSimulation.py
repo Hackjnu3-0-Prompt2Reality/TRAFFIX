@@ -184,35 +184,34 @@ def initialize():
     repeat()
 
 def setTime():
-    # l0, l1, l2, l3 = countVc()
-    # mx = max(l0, l1, l2, l3)
-    # nextGreen = -1
-    # if(mx == l0):
-    #     nextGreen = 0
-    # elif(mx == l1):
-    #     nextGreen = 1
-    # elif(mx == l2):
-    #     nextGreen = 2
-    # else:
-    #     nextGreen = 3
-    signals[(currentGreen + 1) % noOfSignals].green = 10
+    l0, l1, l2, l3 = countVc()
+    mx = max(l0, l1, l2, l3)
+    nextGreen = -1
+    if(mx == l0):
+        nextGreen = 0
+    elif(mx == l1):
+        nextGreen = 1
+    elif(mx == l2):
+        nextGreen = 2
+    else:
+        nextGreen = 3
+    signals[nextGreen].green = 10
 
 def repeat():
     global currentYellow, currentGreen, nextGreen
     while(signals[currentGreen].green > 0):
         updateValues()
-        # l0, l1, l2, l3 = countVc()
-        # mx = max(l0, l1, l2, l3)
-        # nextGreen = -1
-        # if(mx == l0):
-        #     nextGreen = 0
-        # elif(mx == l1):
-        #     nextGreen = 1
-        # elif(mx == l2):
-        #     nextGreen = 2
-        # else:
-        #     nextGreen = 3
-        if(signals[(currentGreen + 1) % noOfSignals].red == detectionTime):
+        l0, l1, l2, l3 = countVc()
+        mx = max(l0, l1, l2, l3)
+        if(mx == l0):
+            nextGreen = 0
+        elif(mx == l1):
+            nextGreen = 1
+        elif(mx == l2):
+            nextGreen = 2
+        else:
+            nextGreen = 3
+        if(signals[nextGreen].red == detectionTime):
             thread = threading.Thread(name="detection",target=setTime, args=())
             thread.daemon = True
             thread.start()
@@ -253,12 +252,7 @@ def generateVehicles():
     while run:
         vhc = random.randint(0, 3)
         Vehicles(vehicleTypes[vhc], directionNumbers[vhc])
-        # if(vehicles[vhc].)
-        # print(len(vehicles['right']))
-        l0, l1, l2, l3 = countVc()
-        print(f"l0: {l0}, l1: {l1}, l2: {l2}, l3:{l3}")
-        print(max(l0, l1, l2, l3))
-        time.sleep(1)
+        time.sleep(1.25)
 
 def main():
 
@@ -307,7 +301,6 @@ def main():
 
         for vehicle in simulation:  
             screen.blit(vehicle.currentImage, [vehicle.x, vehicle.y])
-            # vehicle.render(screen)
             vehicle.move()
 
         pygame.display.update()
