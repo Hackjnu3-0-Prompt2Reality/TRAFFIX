@@ -1,4 +1,4 @@
-# TRAFFIX: an AI traffic management system
+# TRAFFIX: an AI management traffic solution
 
 ## Overview
 * The objective is to alleviate pollution caused by vehicular traffic and idling at crossroads by implementing TRAFFIX, a comprehensive strategy. By employing TRAFFIX, the aim is to significantly lower pollution levels resulting from these activities while concurrently addressing other significant issues related to traffic congestion and environmental degradation.
