@@ -1,7 +1,7 @@
-# AI-OPTIMIZED TRAFFIC MANAGEMENT SYSTEM
+# TRAFFIX: an AI traffic management system
 
 ## Overview
-* The Traffic Management System is a project aimed at optimizing traffic flow at intersections through the use of computer vision, real-time data processing, and machine learning. The system dynamically adjusts traffic signals, provides real-time insights into congestion, and enhances overall traffic management.
+* The objective is to alleviate pollution caused by vehicular traffic and idling at crossroads by implementing TRAFFIX, a comprehensive strategy. By employing TRAFFIX, the aim is to significantly lower pollution levels resulting from these activities while concurrently addressing other significant issues related to traffic congestion and environmental degradation.
 ## Key Features
 1) Real-time Traffic Analysis:
 
