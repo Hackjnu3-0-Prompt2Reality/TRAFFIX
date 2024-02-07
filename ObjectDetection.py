@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture(r"training_video.mp4")
+cap = cv2.VideoCapture(r"detect.mp4")
 min_width_react = 80
 min_height_react = 80
 algo = cv2.createBackgroundSubtractorMOG2()
@@ -95,8 +95,8 @@ while True:
     cv2.rectangle(frame, (large_rectangle[0], large_rectangle[1]), (large_rectangle[2], large_rectangle[3]), (255, 0, 0), 2)
 
     cv2.imshow("Detector", frame)
-    if cv2.waitKey(1) == 13:
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        cv2.destroyAllWindows()
+        cap.release()
         break
 
-cv2.destroyAllWindows()
-cap.release()
